@@ -9,7 +9,7 @@ function App() {
   const [count, handlers] = useCounter(0, { min: 0, max: 10 });
 
   return (
-    <MantineProvider withGlobalStyles withNormalizeCSS>
+    <MantineProvider withGlobalStyles withNormalizeCSS theme ={{ colorScheme: 'dark'}}>
       <div className="App">
         <Text>Count: {count}</Text>
         <Group position="center">
