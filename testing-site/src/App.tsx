@@ -4,11 +4,12 @@ import reactLogo from './assets/react.svg'
 import './App.css'
 import { MantineProvider } from '@mantine/core';
 import { Group, Button, Text } from '@mantine/core';
-import { useCounter } from '@mantine/hooks';
+import { useCounter, useFullscreen } from '@mantine/hooks';
 
 function App() {
   const [count, handlers] = useCounter(0, { min: 0, max: 10 });
   const [value, setValue] = useState(null);
+  const { toggle, fullscreen } = useFullscreen();
 
   return (
     <MantineProvider withGlobalStyles withNormalizeCSS theme ={{ colorScheme: 'dark'}}>
@@ -21,6 +22,9 @@ function App() {
           <Button onClick={handlers.reset}>Reset</Button>
           <Button onClick={() => handlers.set(5)}>Set 5</Button>
         </Group>
+        <Button onClick={toggle} color={fullscreen ? 'red' : 'blue'}>
+      {fullscreen ? 'Exit Fullscreen' : 'Enter Fullscreen'}
+    </Button>
       </div>
     </MantineProvider>
   )
