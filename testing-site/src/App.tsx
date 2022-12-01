@@ -24,7 +24,10 @@ function App() {
         </Group>
         <Button onClick={toggle} color={fullscreen ? 'red' : 'blue'}>
       {fullscreen ? 'Exit Fullscreen' : 'Enter Fullscreen'}
-    </Button>
+        </Button>
+      </div>
+      <div>
+        hi
       </div>
     </MantineProvider>
   )
