@@ -5,11 +5,25 @@ import './App.css'
 import { MantineProvider } from '@mantine/core';
 import { Group, Button, Text } from '@mantine/core';
 import { useCounter, useFullscreen } from '@mantine/hooks';
+import { TextInput, Checkbox, Box } from '@mantine/core';
+import { useForm } from '@mantine/form';
+
 
 function App() {
   const [count, handlers] = useCounter(0, { min: 0, max: 10 });
   const [value, setValue] = useState(null);
   const { toggle, fullscreen } = useFullscreen();
+
+  const form = useForm({
+    initialValues: {
+      email: '',
+      termsOfService: false,
+    },
+
+    validate: {
+      email: (value) => (/^\S+@\S+$/.test(value) ? null : 'Invalid email'),
+    },
+  });
 
   return (
     <MantineProvider withGlobalStyles withNormalizeCSS theme ={{ colorScheme: 'dark'}}>
@@ -27,7 +41,26 @@ function App() {
         </Button>
       </div>
       <div>
-        hi
+      <Box sx={{ maxWidth: 300 }} mx="auto">
+      <form onSubmit={form.onSubmit((values) => console.log(values))}>
+        <TextInput
+          withAsterisk
+          label="Email"
+          placeholder="your@email.com"
+          {...form.getInputProps('email')}
+        />
+
+        <Checkbox
+          mt="md"
+          label="I agree to sell my privacy"
+          {...form.getInputProps('termsOfService', { type: 'checkbox' })}
+        />
+
+        <Group position="right" mt="md">
+          <Button type="submit">Submit</Button>
+        </Group>
+      </form>
+    </Box>
       </div>
     </MantineProvider>
   )
