@@ -31,6 +31,7 @@ function App() {
       theme={{ colorScheme: 'dark' }}
     >
       <div className="App">
+        <Text>Calendar</Text>
         <Calendar value={value} onChange={setValue} />
         <Text>Count: {count}</Text>
         <Group position="center">
