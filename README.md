@@ -13,3 +13,5 @@ Markdown | Less | Pretty
 --- | --- | ---
 *Still* | `renders` | **nicely**
 1 | 2 | 3
+
+(c) (C) (r) (R) (tm) (TM) (p) (P) +-
