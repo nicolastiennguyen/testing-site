@@ -15,8 +15,6 @@ Markdown | Less | Pretty
 1 | 2 | 3
 
 ## Images
-***
----
 ___
 
 ![Minion](https://octodex.github.com/images/minion.png)
