@@ -1,6 +1,6 @@
 # testing-site
 [//]: # (This comment won't be rendered to the visitor!)
-[//]: TESTING ZZZZ (This comment won't be rendered to the visitor!)
+[//]: # TESTING ZZZZ (This comment won't be rendered to the visitor!)
 ___
 
 ## Table
