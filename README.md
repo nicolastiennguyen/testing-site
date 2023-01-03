@@ -9,6 +9,7 @@ ___
 | col 3 is      | right-aligned | $1600 |
 | col 2 is      | centered      |   $12 |
 | zebra stripes | are neat      |    $1 |
+| 555555 | 777 7777      |    $3444 |
 
 Markdown | Less | Pretty
 --- | --- | ---
