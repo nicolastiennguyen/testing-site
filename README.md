@@ -11,8 +11,10 @@ ___
 | zebra stripes | are neat      |    $1 |
 | 555555 | 777 7777      |    $3444 |
 
+
+
 Markdown | Less | Pretty
---- | --- | ---
+--- | :---: | ---:
 *Still* | `renders` | **nicely**
 1 | 2 | 3
 4 | 5 | 6
