@@ -35,7 +35,7 @@ function App() {
         <Calendar value={value} onChange={setValue} />
         <Text>Count: {count}</Text>
         <Group position="center">
-          <Button onClick={handlers.increment}>Increment</Button>
+          <Button onClick={handlers.increment}>Increment!</Button>
           <Button onClick={handlers.decrement}>Decrement</Button>
           <Button onClick={handlers.reset}>Reset</Button>
           <Button onClick={() => handlers.set(5)}>Set 5</Button>
