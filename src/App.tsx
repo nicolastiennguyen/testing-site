@@ -37,7 +37,7 @@ function App() {
         <Group position="center">
           <Button onClick={handlers.increment}>Increment!</Button>
           <Button onClick={handlers.decrement}>Decrement!</Button>
-          <Button onClick={handlers.reset}>Reset</Button>
+          <Button onClick={handlers.reset}>Reset.</Button>
           <Button onClick={() => handlers.set(5)}>Set 5</Button>
         </Group>
         <Button onClick={toggle} color={fullscreen ? 'red' : 'blue'}>
